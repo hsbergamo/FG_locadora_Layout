@@ -324,6 +324,13 @@
             gap: 30px;
         }
 
+        .equip-card-link {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer;
+        }
+
         .equip-card {
             background: var(--white);
             border-radius: 8px;
@@ -331,6 +338,7 @@
             text-align: center;
             box-shadow: 0 5px 20px rgba(0,0,0,0.05);
             transition: transform 0.3s, box-shadow 0.3s;
+            height: 100%;
         }
 
         .equip-card:hover {
@@ -981,33 +989,41 @@
                 <div class="underline"></div>
             </div>
             <div class="equipamentos-grid">
-                <div class="equip-card">
-                    <div class="equip-img">
-                        <img src="./static/img/index/cortadoradeparede.webp" alt="Cortadora de Parede" loading="lazy">
+                <a href="./equipamentos.html" class="equip-card-link" aria-label="Ver mais detalhes sobre comunicação">
+                    <div class="equip-card">
+                        <div class="equip-img">
+                            <img src="./static/img/index/radio.png" alt="Radio Comunicador" loading="lazy">
+                        </div>
+                        <div class="equip-card-body">
+                            <h3>Comunicação</h3>
+                            <p>Rádios comunicadores oferecem comunicação clara, segura e de longo alcance com o melhor custo-benefício do mercado.</p>
+                        </div>
                     </div>
-                    <div class="equip-card-body">
-                        <h3>Cortadora de Parede</h3>
-                        <p>Solução eficaz para criar canaletas em paredes. Equipado com 5 lâminas para cortes precisos e rápidos, </p>
+                </a>
+
+                <a href="./equipamentos.html" class="equip-card-link" aria-label="Ver mais detalhes sobre refrigeração">
+                    <div class="equip-card">
+                        <div class="equip-img">
+                            <img src="./static/img/index/freezer.jpg" alt="Freezer" loading="lazy">
+                        </div>
+                        <div class="equip-card-body">
+                            <h3>Refrigeração</h3>
+                            <p>Freezers dediversos tamanhos para armazenamento de produtos, bebidas e alimentos.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="equip-card">
-                    <div class="equip-img">
-                        <img src="./static/img/index/martelete.webp" alt="Martelete" loading="lazy">
+                </a>
+
+                <a href="./equipamentos.html" class="equip-card-link" aria-label="Ver mais detalhes sobre ferramentas e equipamentos">
+                    <div class="equip-card">
+                        <div class="equip-img">
+                            <img src="./static/img/index/martelete.webp" alt="Martelete" loading="lazy">
+                        </div>
+                        <div class="equip-card-body">
+                            <h3>Ferramentas e Equipamentos</h3>
+                            <p>Equipamentos elétricos de alta qualidade para sua obra.</p>
+                        </div>
                     </div>
-                    <div class="equip-card-body">
-                        <h3>Martelete</h3>
-                        <p>Ideal para perfuração e demolição em obras.</p>
-                    </div>
-                </div>
-                <div class="equip-card">
-                    <div class="equip-img">
-                        <img src="./static/img/index/painelandaime.webp" alt="Painel Andaime" loading="lazy">
-                    </div>
-                    <div class="equip-card-body">
-                        <h3>Painel Andaime</h3>
-                        <p>Estrutura segura para trabalhos em altura.</p>
-                    </div>
-                </div>
+                </a>
             </div>
         </div>
 
@@ -1045,46 +1061,7 @@
         </div>
     </section>
 
-    <section class="testimonials" id="depoimentos" style="display: none;">
-        <div class="container">
-            <div class="section-header">
-                <h2>O que nossos clientes dizem</h2>
-                <div class="underline"></div>
-            </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"Equipamentos de excelente qualidade e pontualidade na entrega. A FGLocadora é nossa parceira em todas as obras."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">JS</div>
-                        <div>
-                            <div class="author-name">João Silva</div>
-                            <div>Construtora Silva</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"Suporte técnico excepcional. Quando precisamos, eles estão disponíveis 24h. Recomendo fortemente."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">MP</div>
-                        <div>
-                            <div class="author-name">Maria Pereira</div>
-                            <div>Obras & Cia</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"Preços competitivos e equipamentos modernos. A parceria com a FGLocadora aumentou nossa produtividade."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">RC</div>
-                        <div>
-                            <div class="author-name">Ricardo Costa</div>
-                            <div>Terraplenagem Costa</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
 
     <section class="contact" id="contato">
         <div class="container">
