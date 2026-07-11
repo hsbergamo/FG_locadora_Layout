@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FGLocadora - Locação de Equipamentos para Construção, Marcenaria e Serralheria</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-     <link rel="icon" type="image/x-icon" href="static/img/ico/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="static/img/ico/favicon.ico">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --primary: #f4b820;
@@ -58,12 +61,12 @@
             z-index: 1000;
             transition: background 0.3s;
             padding: 5px 0;
-   
+
         }
 
         header.scrolled {
             background: rgba(17, 17, 17, 0.98);
-            box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
         }
 
         .header-container {
@@ -175,9 +178,11 @@
         .menu-toggle.active span:nth-child(1) {
             transform: rotate(45deg) translate(5px, 6px);
         }
+
         .menu-toggle.active span:nth-child(2) {
             opacity: 0;
         }
+
         .menu-toggle.active span:nth-child(3) {
             transform: rotate(-45deg) translate(5px, -6px);
         }
@@ -186,7 +191,7 @@
         .hero {
             height: 100vh;
             min-height: 700px;
-            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)), url('./static/img/capa4.png') center/cover no-repeat;
+            background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.75)), url('./static/img/capa4.png') center/cover no-repeat;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -206,6 +211,7 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -336,14 +342,14 @@
             border-radius: 8px;
             overflow: hidden;
             text-align: center;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
             transition: transform 0.3s, box-shadow 0.3s;
             height: 100%;
         }
 
         .equip-card:hover {
             transform: translateY(-8px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
         }
 
         .equip-img {
@@ -424,7 +430,7 @@
 
         .but_mais_equip button {
             width: 100%;
-            max-width:500px;
+            max-width: 500px;
             padding: 22px 40px;
             border: none;
             border-radius: 8px;
@@ -452,12 +458,10 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(
-                90deg,
-                transparent,
-                rgba(255, 255, 255, 0.35),
-                transparent
-            );
+            background: linear-gradient(90deg,
+                    transparent,
+                    rgba(255, 255, 255, 0.35),
+                    transparent);
             transition: left 0.6s ease;
         }
 
@@ -481,11 +485,14 @@
         }
 
         @keyframes btnMaisPulse {
-            0%, 100% {
+
+            0%,
+            100% {
                 box-shadow:
                     0 8px 30px rgba(244, 184, 32, 0.45),
                     0 4px 15px rgba(0, 0, 0, 0.15);
             }
+
             50% {
                 box-shadow:
                     0 12px 40px rgba(244, 184, 32, 0.6),
@@ -504,7 +511,7 @@
         .about-img {
             border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
         }
 
         .about-img img {
@@ -513,12 +520,17 @@
             display: block;
         }
 
+        .about-content {
+            text-align: justify;
+        }
+
         .about-content h2 {
             font-family: var(--font-heading);
             font-weight: 800;
             font-size: 2.2rem;
             margin-bottom: 20px;
             color: var(--secondary);
+            text-align: left;
         }
 
         .about-content p {
@@ -567,10 +579,10 @@
         }
 
         .testimonial-card {
-            background: rgba(255,255,255,0.05);
+            background: rgba(255, 255, 255, 0.05);
             border-radius: 8px;
             padding: 35px 30px;
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .testimonial-text {
@@ -652,7 +664,7 @@
             align-items: center;
             justify-content: center;
             font-size: 1.2rem;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
         }
 
         .contact-details a {
@@ -701,7 +713,7 @@
             background: var(--white);
             border-radius: 12px;
             padding: 30px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
             max-width: 400px;
             margin: 0 auto;
         }
@@ -810,7 +822,7 @@
         .footer-bottom {
             text-align: center;
             padding-top: 20px;
-            border-top: 1px solid rgba(255,255,255,0.1);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
             color: #aaa;
             font-size: 0.85rem;
         }
@@ -836,9 +848,17 @@
         }
 
         @keyframes pulse {
-            0% { box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4); }
-            50% { box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6); }
-            100% { box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4); }
+            0% {
+                box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
+            }
+
+            50% {
+                box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6);
+            }
+
+            100% {
+                box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
+            }
         }
 
         .whatsapp-float:hover {
@@ -866,7 +886,7 @@
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            box-shadow: 0 5px 20px rgba(244,184,32,0.3);
+            box-shadow: 0 5px 20px rgba(244, 184, 32, 0.3);
             z-index: 999;
             opacity: 0;
             visibility: hidden;
@@ -882,13 +902,24 @@
 
         /* Responsive Design */
         @media (max-width: 1024px) {
-            .hero h2 { font-size: 2.5rem; }
-            .about-grid { grid-template-columns: 1fr; }
-            .contact-grid { grid-template-columns: 1fr; }
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         @media (max-width: 768px) {
-            .menu-toggle { display: flex; }
+            .menu-toggle {
+                display: flex;
+            }
+
             .nav-links {
                 position: fixed;
                 top: 0;
@@ -904,24 +935,77 @@
                 transition: left 0.3s ease;
                 z-index: 1050;
             }
-            .nav-links.active { left: 0; }
-            .nav-links a { font-size: 1.1rem; }
-            .hero h2 { font-size: 2rem; }
-            .hero p { font-size: 1rem; }
-            section { padding: 60px 0; }
-            .stats { justify-content: center; }
-            .whatsapp-float { bottom: 20px; right: 20px; width: 50px; height: 50px; }
-            .whatsapp-float svg { width: 26px; height: 26px; }
-            .back-to-top { bottom: 20px; left: 20px; }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .nav-links a {
+                font-size: 1.1rem;
+            }
+
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+
+            .stats {
+                justify-content: center;
+            }
+
+            .whatsapp-float {
+                bottom: 20px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+            }
+
+            .whatsapp-float svg {
+                width: 26px;
+                height: 26px;
+            }
+
+            .back-to-top {
+                bottom: 20px;
+                left: 20px;
+            }
         }
 
         @media (max-width: 480px) {
-            .hero h2 { font-size: 1.8rem; }
-            .hero-buttons { flex-direction: column; align-items: center; }
-            .btn { width: 100%; text-align: center; }
-            .equip-card-body { padding: 24px 20px 30px; }
-            .equip-img { height: 180px; padding: 12px; }
-            .but_mais_equip { padding: 40px 16px 10px; }
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+
+            .equip-card-body {
+                padding: 24px 20px 30px;
+            }
+
+            .equip-img {
+                height: 180px;
+                padding: 12px;
+            }
+
+            .but_mais_equip {
+                padding: 40px 16px 10px;
+            }
+
             .but_mais_equip button {
                 font-size: 1rem;
                 padding: 18px 24px;
@@ -930,12 +1014,13 @@
         }
     </style>
 </head>
+
 <body>
     <header id="header">
         <div class="header-container">
             <div class="logo">
-                       <img src="./static/img/ico/android-chrome-512x512.png" alt="FGLocadora">
-                           
+                <img src="./static/img/ico/android-chrome-512x512.png" alt="FGLocadora">
+
                 <h1>FG<span>Locadora</span>SJP</h1>
             </div>
             <nav>
@@ -946,12 +1031,12 @@
                     <!-- <li><a href="#depoimentos" onclick="closeMenu()">Depoimentos</a></li> -->
                     <li><a href="#fale-conosco" onclick="closeMenu()">Fale Conosco</a></li>
                     <li>
-                        <a href="https://wa.me/5541991677862?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20loca%C3%A7%C3%A3o%20de%20equipamentos.%20Pode%20me%20enviar%20valores%20e%20disponibilidade%3F" 
-                           class="btn-whatsapp-nav" 
-                           target="_blank" 
-                           rel="noopener"
-                           onclick="closeMenu()">
-                            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        <a href="https://wa.me/5541991677862?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20loca%C3%A7%C3%A3o%20de%20equipamentos.%20Pode%20me%20enviar%20valores%20e%20disponibilidade%3F"
+                            class="btn-whatsapp-nav" target="_blank" rel="noopener" onclick="closeMenu()">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                            </svg>
                             Solicitar Cotação
                         </a>
                     </li>
@@ -996,7 +1081,8 @@
                         </div>
                         <div class="equip-card-body">
                             <h3>Comunicação</h3>
-                            <p>Rádios comunicadores oferecem comunicação clara, segura e de longo alcance com o melhor custo-benefício do mercado.</p>
+                            <p>Rádios comunicadores oferecem comunicação clara, segura e de longo alcance com o melhor
+                                custo-benefício do mercado.</p>
                         </div>
                     </div>
                 </a>
@@ -1013,7 +1099,8 @@
                     </div>
                 </a>
 
-                <a href="./equipamentos.html" class="equip-card-link" aria-label="Ver mais detalhes sobre ferramentas e equipamentos">
+                <a href="./equipamentos.html" class="equip-card-link"
+                    aria-label="Ver mais detalhes sobre ferramentas e equipamentos">
                     <div class="equip-card">
                         <div class="equip-img">
                             <img src="./static/img/index/martelete.webp" alt="Martelete" loading="lazy">
@@ -1036,19 +1123,48 @@
         <div class="container">
             <div class="about-grid">
                 <div class="about-img">
-                    <img src="./static/img/index/sobre1.png" alt="Equipe FGLocadoraSJP" loading="lazy">
+                    <img src="./static/img/index/sobre3.png" alt="Equipe FGLocadoraSJP" loading="lazy">
                 </div>
                 <div class="about-content">
                     <h2>Por que escolher a FGLocadora?</h2>
-                  
-                    <p>Nascemos com a determinação de transformar a locação de equipamentos e ferramentas em sinônimo de máxima eficiência. Unimos nossa energia a uma frota moderna de máquinas de última geração. Garantimos máxima produtividade e segurança total para a sua obra através de manutenção preventiva rigorosa e assistência técnica 24 horas. <br>Mais do que alugar equipamentos das melhores marcas do mercado, entregamos o compromisso real de quem quer crescer junto com o seu projeto. Nossa equipe está pronta, motivada e altamente treinada para entender o seu desafio e oferecer a solução exata para o seu canteiro de obras. Confie o seu projeto a quem entra em campo com a força e a vontade de fazer acontecer. </p>
+
+                    <p>Nascemos com o propósito de oferecer soluções em locação de equipamentos que unem qualidade,
+                        segurança e eficiência. Investimos continuamente em um conjunto de equipamentos moderno,
+                        composto por máquinas e equipamentos de alto desempenho, revisados e prontos para atender às
+                        mais diversas necessidades.</p>
+                    <p>
+
+                        Atuamos nos segmentos de eventos, com locação de rádios comunicadores e equipamentos de
+                        refrigeração, além de atender às áreas da construção civil, marcenaria e serralheria.
+                        Disponibilizamos equipamentos confiáveis que proporcionam mais produtividade, economia e
+                        praticidade, eliminando a necessidade de investimentos na compra de máquinas.
+                    </p>
+                    <p>
+                        Nosso compromisso é oferecer atendimento ágil, equipamentos de qualidade e um processo de
+                        locação simples e transparente. Trabalhamos para que cada cliente encontre a solução ideal para
+                        sua necessidade, com pontualidade, confiança e suporte especializado.
+                    </p>
+                    <p>
+                        Mais do que locar equipamentos, construímos relações de confiança, oferecendo praticidade,
+                        segurança e a tranquilidade de contar com um parceiro comprometido com a excelência em cada
+                        locação.
+                    </p>
+
+                    <!-- <p>Nascemos com a determinação de transformar a locação de equipamentos e ferramentas em sinônimo de
+                        máxima eficiência. Unimos nossa energia a uma frota moderna de máquinas de última geração.
+                        Garantimos máxima produtividade e segurança total para a sua obra através de manutenção
+                        preventiva rigorosa e assistência técnica 24 horas. <br>Mais do que alugar equipamentos das
+                        melhores marcas do mercado, entregamos o compromisso real de quem quer crescer junto com o seu
+                        projeto. Nossa equipe está pronta, motivada e altamente treinada para entender o seu desafio e
+                        oferecer a solução exata para o seu canteiro de obras. Confie o seu projeto a quem entra em
+                        campo com a força e a vontade de fazer acontecer. </p> -->
                     <div class="stats">
                         <!-- <div class="stat-item">
                             <div class="stat-number">+15</div>
                             <div class="stat-label">Anos de Experiência</div>
                         </div> -->
                         <div class="stat-item">
-                            <div class="stat-number">+200</div>
+                            <div class="stat-number">+120</div>
                             <div class="stat-label">Clientes Satisfeitos</div>
                         </div>
                         <div class="stat-item">
@@ -1072,7 +1188,8 @@
             <div class="contact-grid">
                 <div class="contact-info">
                     <h3>Fale Diretamente Conosco</h3>
-                    <p>Clique no botão ao lado para ser redirecionado ao nosso WhatsApp com uma mensagem pronta. Respondemos em até 2 minutos!</p>
+                    <p>Clique no botão ao lado para ser redirecionado ao nosso WhatsApp com uma mensagem pronta.
+                        Respondemos em até 2 minutos!</p>
                     <ul class="contact-details">
                         <li>
                             <span class="icon">📞</span>
@@ -1091,11 +1208,12 @@
                             Seg a Sex: 07:00 às 17:00
                         </li>
                     </ul>
-                    <a href="https://wa.me/5541991677862?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20loca%C3%A7%C3%A3o%20de%20equipamentos.%20Pode%20me%20enviar%20valores%20e%20disponibilidade%3F" 
-                       class="btn-whatsapp-large" 
-                       target="_blank" 
-                       rel="noopener">
-                        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    <a href="https://wa.me/5541991677862?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20loca%C3%A7%C3%A3o%20de%20equipamentos.%20Pode%20me%20enviar%20valores%20e%20disponibilidade%3F"
+                        class="btn-whatsapp-large" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                        </svg>
                         Chamar no WhatsApp
                     </a>
                 </div>
@@ -1103,16 +1221,21 @@
                     <div class="whatsapp-preview">
                         <div class="preview-header">
                             <div class="preview-avatar">
-                                <svg viewBox="0 0 24 24" width="22" height="22"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" fill="white"/></svg>
+                                <svg viewBox="0 0 24 24" width="22" height="22">
+                                    <path
+                                        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+                                        fill="white" />
+                                </svg>
                             </div>
                             <div>
-                              <strong>FGLocadora</strong>
+                                <strong>FGLocadora</strong>
                                 <br>
                                 <small style="color:#666;">online</small>
                             </div>
                         </div>
                         <div class="preview-message">
-                            Olá! Gostaria de solicitar um orçamento de locação de equipamentos. Pode me enviar valores e disponibilidade?
+                            Olá! Gostaria de solicitar um orçamento de locação de equipamentos. Pode me enviar valores e
+                            disponibilidade?
                         </div>
                     </div>
                 </div>
@@ -1123,7 +1246,10 @@
     <div class="map-section">
         <div class="map-container">
 
-            <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3598.627113034332!2d-49.19317642460563!3d-25.584069777463906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjXCsDM1JzAyLjciUyA0OcKwMTEnMjYuMiJX!5e0!3m2!1spt-BR!2sbr!4v1780709162658!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3598.627113034332!2d-49.19317642460563!3d-25.584069777463906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjXCsDM1JzAyLjciUyA0OcKwMTEnMjYuMiJX!5e0!3m2!1spt-BR!2sbr!4v1780709162658!5m2!1spt-BR!2sbr"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
 
@@ -1166,15 +1292,16 @@
         </div>
     </footer>
 
-    <a href="https://wa.me/5541991677862?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20loca%C3%A7%C3%A3o%20de%20equipamentos.%20Pode%20me%20enviar%20valores%20e%20disponibilidade%3F" 
-       class="whatsapp-float" 
-       target="_blank" 
-       rel="noopener" 
-       aria-label="Fale conosco pelo WhatsApp">
-        <svg viewBox="0 0 32 32"><path d="M16 0C7.164 0 0 7.164 0 16c0 2.816 0.738 5.551 2.137 7.938L0.05 31.95l8.262-2.058A15.95 15.95 0 0 0 16 32c8.836 0 16-7.164 16-16S24.836 0 16 0zm0 29.332c-2.543 0-5.012-0.684-7.176-1.977l-0.516-0.305-4.902 1.221 1.244-4.738-0.334-0.531C3.163 21.359 2.4 18.754 2.4 16 2.4 8.486 8.486 2.4 16 2.4S29.6 8.486 29.6 16 23.514 29.332 16 29.332zm7.406-9.063c-0.41-0.205-2.42-1.195-2.795-1.334s-0.648-0.205-0.922 0.205-1.059 1.334-1.299 1.607-0.478 0.307-0.887 0.102c-0.41-0.205-1.729-0.637-3.295-2.031-1.217-1.084-2.039-2.422-2.277-2.832s-0.025-0.633 0.18-0.838c0.184-0.184 0.41-0.48 0.615-0.721s0.273-0.41 0.41-0.684 0.068-0.512-0.034-0.719-0.922-2.224-1.264-3.047-0.683-0.637-0.922-0.648-0.512 0-0.785 0-0.717 0.102-1.094 0.512-1.434 1.402-1.434 3.418 1.537 3.965 1.752 4.238 3.025 4.619 7.328 6.477c1.025 0.443 1.826 0.707 2.449 0.906 1.029 0.327 1.967 0.281 2.707 0.17 0.826-0.123 2.539-1.037 2.896-2.039s0.355-1.861 0.248-2.039-0.385-0.307-0.795-0.512z"/></svg>
+    <a href="https://wa.me/5541991677862?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20loca%C3%A7%C3%A3o%20de%20equipamentos.%20Pode%20me%20enviar%20valores%20e%20disponibilidade%3F"
+        class="whatsapp-float" target="_blank" rel="noopener" aria-label="Fale conosco pelo WhatsApp">
+        <svg viewBox="0 0 32 32">
+            <path
+                d="M16 0C7.164 0 0 7.164 0 16c0 2.816 0.738 5.551 2.137 7.938L0.05 31.95l8.262-2.058A15.95 15.95 0 0 0 16 32c8.836 0 16-7.164 16-16S24.836 0 16 0zm0 29.332c-2.543 0-5.012-0.684-7.176-1.977l-0.516-0.305-4.902 1.221 1.244-4.738-0.334-0.531C3.163 21.359 2.4 18.754 2.4 16 2.4 8.486 8.486 2.4 16 2.4S29.6 8.486 29.6 16 23.514 29.332 16 29.332zm7.406-9.063c-0.41-0.205-2.42-1.195-2.795-1.334s-0.648-0.205-0.922 0.205-1.059 1.334-1.299 1.607-0.478 0.307-0.887 0.102c-0.41-0.205-1.729-0.637-3.295-2.031-1.217-1.084-2.039-2.422-2.277-2.832s-0.025-0.633 0.18-0.838c0.184-0.184 0.41-0.48 0.615-0.721s0.273-0.41 0.41-0.684 0.068-0.512-0.034-0.719-0.922-2.224-1.264-3.047-0.683-0.637-0.922-0.648-0.512 0-0.785 0-0.717 0.102-1.094 0.512-1.434 1.402-1.434 3.418 1.537 3.965 1.752 4.238 3.025 4.619 7.328 6.477c1.025 0.443 1.826 0.707 2.449 0.906 1.029 0.327 1.967 0.281 2.707 0.17 0.826-0.123 2.539-1.037 2.896-2.039s0.355-1.861 0.248-2.039-0.385-0.307-0.795-0.512z" />
+        </svg>
     </a>
 
-    <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="Voltar ao topo">↑</button>
+    <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+        aria-label="Voltar ao topo">↑</button>
 
     <script>
         // Mobile Menu Toggle
@@ -1192,7 +1319,7 @@
         }
 
         // Close menu when clicking outside
-        document.addEventListener('click', function(e) {
+        document.addEventListener('click', function (e) {
             if (!e.target.closest('nav') && !e.target.closest('.menu-toggle')) {
                 closeMenu();
             }
@@ -1200,7 +1327,7 @@
 
         // Header scroll effect
         const header = document.getElementById('header');
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             if (window.scrollY > 100) {
                 header.classList.add('scrolled');
             } else {
@@ -1218,7 +1345,7 @@
 
         // Smooth scroll for all anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+            anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
@@ -1228,4 +1355,5 @@
         });
     </script>
 </body>
+
 </html>
