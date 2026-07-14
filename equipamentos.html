@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locação - FGLocações</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #f4b820;
+            --primary-dark: #d4a017;
+            --secondary: #1a1a1a;
+            --dark: #111111;
+            --gray: #f5f5f5;
+            --text: #333333;
+            --text-light: #666666;
+            --white: #ffffff;
+            --whatsapp: #25d366;
+            --whatsapp-dark: #128c7e;
+            --font-heading: 'Montserrat', sans-serif;
+            --font-body: 'Roboto', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scrollbar-gutter: stable;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header / Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(17, 17, 17, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            transition: background 0.3s;
+            padding: 5px 0;
+        }
+
+        header.scrolled {
+            background: rgba(17, 17, 17, 0.98);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo h1 {
+            font-family: var(--font-heading);
+            font-weight: 800;
+            font-size: 1.6rem;
+            color: var(--white);
+            letter-spacing: -0.5px;
+            line-height: 1;
+        }
+
+        .logo span {
+            color: var(--primary);
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            height: 60px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            gap: 32px;
+        }
+
+        .nav-links li {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .btn-whatsapp-nav {
+            background: var(--whatsapp);
+            color: var(--white) !important;
+            padding: 12px 20px;
+            border-radius: 4px;
+            font-weight: 700 !important;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-whatsapp-nav:hover {
+            background: var(--whatsapp-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-whatsapp-nav svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            z-index: 1100;
+        }
+
+        .menu-toggle span {
+            width: 28px;
+            height: 3px;
+            background: var(--white);
+            transition: all 0.3s;
+            border-radius: 2px;
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 6px);
+        }
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -6px);
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-family: var(--font-heading);
+            font-weight: 800;
+            font-size: 2.2rem;
+            color: var(--secondary);
+            margin-bottom: 10px;
+        }
+
+        .section-header .underline {
+            width: 80px;
+            height: 4px;
+            background: var(--primary);
+            margin: 0 auto;
+            border-radius: 2px;
+        }
+
+        .equipamentos {
+            background: var(--gray);
+            padding-top: 120px;
+        }
+
+        .equipamentos-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            min-height: 420px;
+        }
+
+        .equip-card {
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .equip-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+
+        .equip-img {
+            width: 100%;
+            height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+            border-bottom: 3px solid var(--primary);
+            box-sizing: border-box;
+            background: #ffffff;
+            position: relative;
+        }
+
+        .equip-img img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            display: block;
+        }
+
+        .equip-img .img-fallback {
+            width: 72px;
+            height: 72px;
+            opacity: 0.25;
+            fill: var(--secondary);
+        }
+
+        .equip-card-body {
+            padding: 28px 30px 36px;
+        }
+
+        .equip-card h3 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--secondary);
+        }
+
+        .equip-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 5px;
+        }
+
+        .equip-card .equip-meta {
+            font-size: 0.85rem;
+            color: #888;
+            margin-bottom: 8px;
+        }
+
+        .equip-categoria {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: var(--secondary);
+            color: var(--white);
+            font-size: 0.65rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            padding: 4px 8px;
+            border-radius: 3px;
+            max-width: calc(100% - 20px);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .equip-empty {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-light);
+            font-size: 1rem;
+        }
+
+        .equip-card .btn-whatsapp-small {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 15px;
+            padding: 10px 18px;
+            background: var(--whatsapp);
+            color: var(--white);
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: all 0.3s;
+        }
+
+        .equip-card .btn-whatsapp-small:hover {
+            background: var(--whatsapp-dark);
+            transform: translateY(-2px);
+        }
+
+        .equip-card .btn-whatsapp-small svg {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
+        }
+
+        @media (max-width: 992px) {
+            .equipamentos-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle { display: flex; }
+            .nav-links {
+                position: fixed;
+                top: 0;
+                left: -100%;
+                width: 80%;
+                max-width: 350px;
+                height: 100vh;
+                background: var(--dark);
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 100px 40px 40px;
+                gap: 25px;
+                transition: left 0.3s ease;
+                z-index: 1050;
+            }
+            .nav-links.active { left: 0; }
+            .nav-links a { font-size: 1.1rem; }
+            section { padding: 60px 0; }
+            .equipamentos { padding-top: 100px; }
+            .equipamentos-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .equip-card-body { padding: 24px 20px 30px; }
+            .equip-img { height: 180px; padding: 12px; }
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div class="header-container">
+            <div class="logo">
+                <h1>FG<span>Locadora</span>SJP</h1>
+            </div>
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="./index.html" onclick="closeMenu()">Início</a></li>
+                    <li><a href="#equipamentos" onclick="closeMenu()">Equipamentos</a></li>
+                    <li><a href="./index.html#sobre" onclick="closeMenu()">Sobre Nós</a></li>
+                    <li><a href="./index.html#fale-conosco" onclick="closeMenu()">Fale Conosco</a></li>
+                    <li>
+                        <a href="https://wa.me/5541991677862?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20loca%C3%A7%C3%A3o%20de%20equipamentos.%20Pode%20me%20enviar%20valores%20e%20disponibilidade%3F"
+                           class="btn-whatsapp-nav"
+                           target="_blank"
+                           rel="noopener"
+                           onclick="closeMenu()">
+                            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                            Solicitar Cotação
+                        </a>
+                    </li>
+                </ul>
+                <div class="menu-toggle" id="menuToggle" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="equipamentos" id="equipamentos">
+        <div class="container">
+            <div class="section-header">
+                <h2>Equipamentos para Locação</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="equipamentos-grid" id="equipamentosGrid"></div>
+        </div>
+    </section>
+
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        function toggleMenu() {
+            menuToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        }
+
+        function closeMenu() {
+            menuToggle.classList.remove('active');
+            navLinks.classList.remove('active');
+        }
+
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('nav') && !e.target.closest('.menu-toggle')) {
+                closeMenu();
+            }
+        });
+
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        const WHATSAPP_NUMBER = '5541991677862';
+        const WHATSAPP_ICON = '<svg viewBox="0 0 24 24" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>';
+        const IMG_FALLBACK_ICON = '<svg class="img-fallback" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>';
+        window.IMG_FALLBACK_ICON = IMG_FALLBACK_ICON;
+        const IMG_EQUIP_PATH = './static/img/equipamentos_img/';
+
+        /* Dados da Planilha_Equipamentos_Locadora.xlsx */
+        const equipamentos = [
+            { codigo: "LOC-FE-001", categoria: "Ferramentas Elétricas", nome: "Serra Tico Tico", marca: "Dewalt", modelo: "DWE300", potencia: "", alimentacao: "220V", aplicacao: "Cortes em madeira" },
+            { codigo: "LOC-FE-002", categoria: "Ferramentas Elétricas", nome: "Esmerilhadeira Angular", marca: "BLACK+DECKER", modelo: "G650", potencia: "650W", alimentacao: "220V", aplicacao: "Corte e desbaste" },
+            { codigo: "LOC-FE-003", categoria: "Ferramentas Elétricas", nome: "Motocompressor de Ar", marca: "Vonder", modelo: "MCV216", potencia: "8 PCM", alimentacao: "220V", aplicacao: "Ferramentas pneumáticas" },
+            { codigo: "LOC-FE-004", categoria: "Ferramentas Elétricas", nome: "Furadeira de Impacto", marca: "Bosch", modelo: "GSB 450", potencia: "450W", alimentacao: "220V", aplicacao: "Perfuração" },
+            { codigo: "LOC-FE-005", categoria: "Ferramentas Elétricas", nome: "Serra de Esquadria", marca: "Vonder", modelo: "SEV 1810T", potencia: "1800W", alimentacao: "220V", aplicacao: "Cortes angulares" },
+            { codigo: "LOC-FE-006", categoria: "Ferramentas Elétricas", nome: "Serra Circular de Bancada", marca: "Makita", modelo: "MLT100", potencia: "1500W", alimentacao: "220V", aplicacao: "Cortes madeira" },
+            { codigo: "LOC-FE-007", categoria: "Ferramentas Elétricas", nome: "Cortador de Concreto", marca: "Sigma", modelo: "SGT-6105", potencia: "3000W", alimentacao: "220V", aplicacao: "Corte concreto" },
+            { codigo: "LOC-FE-008", categoria: "Ferramentas Elétricas", nome: "Kit Zero Pó", marca: "", modelo: "SH10000 + SH900A", potencia: "", alimentacao: "220V", aplicacao: "Lixamento" },
+            { codigo: "LOC-FE-009", categoria: "Ferramentas Elétricas", nome: "Martelo Demolidor", marca: "BF", modelo: "30/62", potencia: "", alimentacao: "220V", aplicacao: "Demolição" },
+            { codigo: "LOC-EV-001", categoria: "Eventos", nome: "Climatizador", marca: "Ventisol", modelo: "Clin 125 Pro", potencia: "400W", alimentacao: "220V", aplicacao: "Climatização" },
+            { codigo: "LOC-EV-002", categoria: "Eventos", nome: "Rádio Digital", marca: "Motorola", modelo: "DTR620", potencia: "", alimentacao: "Bateria", aplicacao: "Comunicação" },
+            { codigo: "LOC-EV-003", categoria: "Eventos", nome: "Tela Interativa", marca: "Studio", modelo: "65\"", potencia: "", alimentacao: "220V", aplicacao: "Reuniões" },
+            { codigo: "LOC-EV-004", categoria: "Eventos", nome: "Cadeira Bistrô", marca: "Top Bras", modelo: "Reforçada", potencia: "", alimentacao: "", aplicacao: "Eventos" },
+            { codigo: "LOC-EV-005", categoria: "Eventos", nome: "Rádio Guia Turístico", marca: "Retekess", modelo: "T130", potencia: "", alimentacao: "Bateria", aplicacao: "Transmissão simultânea" },
+            { codigo: "LOC-CB-001", categoria: "Combustão", nome: "Compactador de Solo", marca: "Buffalo", modelo: "70 kilos", potencia: "", alimentacao: "Gasolina", aplicacao: "Compactação" },
+            { codigo: "LOC-CB-002", categoria: "Combustão", nome: "Gerador Inverter", marca: "Buffalo", modelo: "4500W", potencia: "4500W", alimentacao: "110/220V", aplicacao: "Geração de energia" }
+        ];
+
+        function escapeHtml(text) {
+            const el = document.createElement('div');
+            el.textContent = text || '';
+            return el.innerHTML;
+        }
+
+        function buildDescricao(equipamento) {
+            const detalhes = [equipamento.marca, equipamento.modelo, equipamento.potencia, equipamento.alimentacao]
+                .filter(Boolean)
+                .join(' · ');
+            return {
+                aplicacao: equipamento.aplicacao || '',
+                detalhes
+            };
+        }
+
+        function buildWhatsAppUrl(nome, codigo) {
+            const mensagem = `Olá! Tenho interesse na locação de ${nome}${codigo ? ` (código: ${codigo})` : ''}. Pode me enviar valores e condições?`;
+            return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(mensagem)}`;
+        }
+
+        function renderEquipamentoImagem(equipamento) {
+            const nomeArquivo = (equipamento.codigo || '').trim().replace(/[^a-zA-Z0-9._-]/g, '');
+            const src = nomeArquivo
+                ? `${IMG_EQUIP_PATH}${nomeArquivo}.png`
+                : `${IMG_EQUIP_PATH}null.png`;
+
+            return `<img src="${src}" alt="${escapeHtml(equipamento.nome)}" loading="lazy" onerror="this.outerHTML=IMG_FALLBACK_ICON">`;
+        }
+
+        function renderEquipamentoCard(equipamento) {
+            const { aplicacao, detalhes } = buildDescricao(equipamento);
+
+            return `
+                <div class="equip-card">
+                    <div class="equip-img">
+                        <span class="equip-categoria">${escapeHtml(equipamento.categoria)}</span>
+                        ${renderEquipamentoImagem(equipamento)}
+                    </div>
+                    <div class="equip-card-body">
+                        <h3>${escapeHtml(equipamento.nome)}</h3>
+                        ${aplicacao ? `<p>${escapeHtml(aplicacao)}</p>` : ''}
+                        ${detalhes ? `<p class="equip-meta">${escapeHtml(detalhes)}</p>` : ''}
+                        <a href="${buildWhatsAppUrl(equipamento.nome, equipamento.codigo)}"
+                           class="btn-whatsapp-small"
+                           target="_blank"
+                           rel="noopener">
+                            ${WHATSAPP_ICON}
+                            ALUGAR
+                        </a>
+                    </div>
+                </div>
+            `;
+        }
+
+        function loadEquipamentos() {
+            const grid = document.getElementById('equipamentosGrid');
+
+            if (!equipamentos.length) {
+                grid.innerHTML = '<p class="equip-empty">Nenhum equipamento disponível no momento.</p>';
+                return;
+            }
+
+            grid.innerHTML = equipamentos.map(renderEquipamentoCard).join('');
+        }
+
+        loadEquipamentos();
+    </script>
+</body>
+</html>
