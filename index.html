@@ -240,59 +240,6 @@
             margin-right: auto;
         }
 
-        .hero-buttons {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            padding: 16px 32px;
-            border-radius: 4px;
-            font-weight: 700;
-            font-family: var(--font-heading);
-            text-decoration: none;
-            transition: all 0.3s;
-            letter-spacing: 0.5px;
-            cursor: pointer;
-            border: none;
-            font-size: 0.95rem;
-        }
-
-        .btn-whatsapp {
-            background: var(--whatsapp);
-            color: var(--white);
-        }
-
-        .btn-whatsapp:hover {
-            background: var(--whatsapp-dark);
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
-        }
-
-        .btn-whatsapp svg {
-            width: 22px;
-            height: 22px;
-            fill: currentColor;
-        }
-
-        .btn-outline {
-            border: 2px solid var(--white);
-            color: var(--white);
-            background: transparent;
-        }
-
-        .btn-outline:hover {
-            background: var(--white);
-            color: var(--dark);
-            transform: translateY(-3px);
-        }
-
         /* Section Styles */
         section {
             padding: 80px 0;
@@ -390,32 +337,6 @@
             color: var(--text-light);
             font-size: 0.95rem;
             margin-bottom: 5px;
-        }
-
-        .equip-card .btn-whatsapp-small {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            margin-top: 15px;
-            padding: 10px 18px;
-            background: var(--whatsapp);
-            color: var(--white);
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.85rem;
-            transition: all 0.3s;
-        }
-
-        .equip-card .btn-whatsapp-small:hover {
-            background: var(--whatsapp-dark);
-            transform: translateY(-2px);
-        }
-
-        .equip-card .btn-whatsapp-small svg {
-            width: 16px;
-            height: 16px;
-            fill: currentColor;
         }
 
         .but_mais_equip {
@@ -538,84 +459,6 @@
             color: var(--text-light);
         }
 
-        .stats {
-            display: flex;
-            gap: 30px;
-            margin-top: 30px;
-            flex-wrap: wrap;
-        }
-
-        .stat-item {
-            text-align: center;
-        }
-
-        .stat-number {
-            font-family: var(--font-heading);
-            font-weight: 800;
-            font-size: 2.5rem;
-            color: var(--primary);
-        }
-
-        .stat-label {
-            font-weight: 500;
-            color: var(--text-light);
-            font-size: 0.9rem;
-        }
-
-        /* Testimonials Section */
-        .testimonials {
-            background: var(--secondary);
-            color: var(--white);
-        }
-
-        .testimonials .section-header h2 {
-            color: var(--white);
-        }
-
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .testimonial-card {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 8px;
-            padding: 35px 30px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .testimonial-text {
-            font-style: italic;
-            margin-bottom: 20px;
-            opacity: 0.9;
-        }
-
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .author-avatar {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: var(--primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            color: var(--dark);
-            font-family: var(--font-heading);
-            font-size: 1.2rem;
-        }
-
-        .author-name {
-            font-weight: 700;
-            color: var(--primary);
-        }
-
         /* Contact / CTA Section */
         .contact {
             background: var(--gray);
@@ -716,6 +559,16 @@
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
             max-width: 400px;
             margin: 0 auto;
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .contact-illustration .whatsapp-preview:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 14px 44px rgba(0, 0, 0, 0.15);
         }
 
         .whatsapp-preview .preview-header {
@@ -956,10 +809,6 @@
                 padding: 60px 0;
             }
 
-            .stats {
-                justify-content: center;
-            }
-
             .whatsapp-float {
                 bottom: 20px;
                 right: 20px;
@@ -981,16 +830,6 @@
         @media (max-width: 480px) {
             .hero h2 {
                 font-size: 1.8rem;
-            }
-
-            .hero-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .btn {
-                width: 100%;
-                text-align: center;
             }
 
             .equip-card-body {
@@ -1026,9 +865,8 @@
             <nav>
                 <ul class="nav-links" id="navLinks">
                     <li><a href="#inicio" onclick="closeMenu()">Início</a></li>
-                    <li><a href="#equipamentos" onclick="closeMenu()">Equipamentos</a></li>
+                    <li><a href="./equipamentos.html" onclick="closeMenu()">Equipamentos</a></li>
                     <li><a href="#sobre" onclick="closeMenu()">Sobre Nós</a></li>
-                    <!-- <li><a href="#depoimentos" onclick="closeMenu()">Depoimentos</a></li> -->
                     <li><a href="#fale-conosco" onclick="closeMenu()">Fale Conosco</a></li>
                     <li>
                         <a href="https://wa.me/5541991677862?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20loca%C3%A7%C3%A3o%20de%20equipamentos.%20Pode%20me%20enviar%20valores%20e%20disponibilidade%3F"
@@ -1054,16 +892,6 @@
         <div class="hero-content">
             <h2>Locação de <span>Equipamentos</span> para eventos, construção, serralheria e marcenaria.</h2>
             <p>Equipamentos e ferramentas com manutenção em dia. Entrega rápida.</p>
-            <div class="hero-buttons">
-                <!-- <a href="https://wa.me/5541991677862?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20loca%C3%A7%C3%A3o%20de%20equipamentos.%20Pode%20me%20enviar%20valores%20e%20disponibilidade%3F" 
-                   class="btn btn-whatsapp" 
-                   target="_blank" 
-                   rel="noopener">
-                    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                    Solicitar Orçamento no WhatsApp
-                </a> -->
-                <!-- <a href="#equipamentos" class="btn btn-outline">Nossos Equipamentos</a> -->
-            </div>
         </div>
     </section>
 
@@ -1149,29 +977,6 @@
                         segurança e a tranquilidade de contar com um parceiro comprometido com a excelência em cada
                         locação.
                     </p>
-
-                    <!-- <p>Nascemos com a determinação de transformar a locação de equipamentos e ferramentas em sinônimo de
-                        máxima eficiência. Unimos nossa energia a uma frota moderna de máquinas de última geração.
-                        Garantimos máxima produtividade e segurança total para a sua obra através de manutenção
-                        preventiva rigorosa e assistência técnica 24 horas. <br>Mais do que alugar equipamentos das
-                        melhores marcas do mercado, entregamos o compromisso real de quem quer crescer junto com o seu
-                        projeto. Nossa equipe está pronta, motivada e altamente treinada para entender o seu desafio e
-                        oferecer a solução exata para o seu canteiro de obras. Confie o seu projeto a quem entra em
-                        campo com a força e a vontade de fazer acontecer. </p> -->
-                    <div class="stats">
-                        <!-- <div class="stat-item">
-                            <div class="stat-number">+15</div>
-                            <div class="stat-label">Anos de Experiência</div>
-                        </div> -->
-                        <div class="stat-item">
-                            <div class="stat-number">+120</div>
-                            <div class="stat-label">Clientes Satisfeitos</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">+50</div>
-                            <div class="stat-label">Equipamentos</div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -1218,7 +1023,11 @@
                     </a>
                 </div>
                 <div class="contact-illustration">
-                    <div class="whatsapp-preview">
+                    <a href="https://wa.me/5541991677862?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20loca%C3%A7%C3%A3o%20de%20equipamentos.%20Pode%20me%20enviar%20valores%20e%20disponibilidade%3F"
+                        class="whatsapp-preview"
+                        target="_blank"
+                        rel="noopener"
+                        aria-label="Abrir WhatsApp para solicitar cotação">
                         <div class="preview-header">
                             <div class="preview-avatar">
                                 <svg viewBox="0 0 24 24" width="22" height="22">
@@ -1237,7 +1046,7 @@
                             Olá! Gostaria de solicitar um orçamento de locação de equipamentos. Pode me enviar valores e
                             disponibilidade?
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -1245,7 +1054,6 @@
 
     <div class="map-section">
         <div class="map-container">
-
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3598.627113034332!2d-49.19317642460563!3d-25.584069777463906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjXCsDM1JzAyLjciUyA0OcKwMTEnMjYuMiJX!5e0!3m2!1spt-BR!2sbr!4v1780709162658!5m2!1spt-BR!2sbr"
                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
@@ -1278,13 +1086,13 @@
                         <li>📍 São José dos Pinhais/PR</li>
                     </ul>
                 </div>
-                <div class="footer-col">
+                <!-- <div class="footer-col">
                     <h4>Redes Sociais</h4>
                     <ul>
                         <li><a href="#">Instagram</a></li>
                         <li><a href="#">Facebook</a></li>
                     </ul>
-                </div>
+                </div> -->
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 FGLocadoraSJP - Todos os Direitos Reservados</p>
